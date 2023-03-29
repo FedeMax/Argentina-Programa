@@ -1,0 +1,85 @@
+package clase1;
+
+import java.util.Scanner;
+
+public class Clase1 {
+
+    public static void main(String[] args) {
+
+        int numeroInicio = 5;
+        int numeroFin = 14;
+        Scanner leer = new Scanner(System.in);
+        int selector;
+
+        System.out.println("Indique si quiere leer numeros pares o impares"
+                + "\n  Indique (1) para 'Par' (2) para 'Impar' ");
+        selector = leer.nextInt();
+
+        //Comente el codigo que no desee utilizar
+        while (numeroInicio <= numeroFin) {
+
+            if (numeroInicio % 2 == 0 && selector == 1) {
+                System.out.print(numeroInicio + "\t");
+            } else if (numeroInicio % 2 != 0 && selector == 2) {
+                System.out.print(numeroInicio + "\t");
+            }
+            numeroInicio++;
+        }
+
+        System.out.println("");
+
+        for (int i = 14; i >= 5; i--) {
+            if (i % 2 == 0 && selector == 1) {
+                System.out.print(i + "\t");
+            } else if (i % 2 != 0 && selector == 2) {
+                System.out.print(i + "\t");
+            }
+        }
+    }
+}
+
+
+package clase1;
+
+import java.util.Scanner;
+
+public class Clase1 {
+
+    public static void main(String[] args) {
+        
+        int ingresosMensuales;
+        int cantDeVehiculos;
+        int numDeInmuebles;
+        boolean capacidadEconomicaPlena=false;
+        int selector;
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.println("Indique sus ingresos mensuales");
+        ingresosMensuales = leer.nextInt();
+        
+        System.out.println("Indique la cantidad de vehiculos que posee menores a 5 años");
+        cantDeVehiculos = leer.nextInt();
+        
+        System.out.println("Indique el numero de inmuebles que posee");
+        numDeInmuebles = leer.nextInt();
+        
+        System.out.println("¿Posee usted una embarcación, una aeronave de lujo \n"
+                + " o es titular de activos societarios?");
+        System.out.println("Indique (1) para 'Si' (2) para 'No'");
+        selector= leer.nextInt();
+        if (selector==1) {
+            capacidadEconomicaPlena=true;
+        }else if(selector==2){
+            capacidadEconomicaPlena=false;
+        }
+        
+        System.out.println("Usted...");
+        
+        if (ingresosMensuales>489083 || cantDeVehiculos>=3 || numDeInmuebles>=3 || capacidadEconomicaPlena==true) {
+            System.out.println(" pertenece al sector de Ingresos altos");
+        }else{
+            System.out.println(" es tan pobre como el linyera de la esquina");
+        }
+        
+    }
+}
